@@ -58,8 +58,9 @@ body{
     border-bottom: 2px solid var(--bg-color);
 }
 section{
- min-height: 100vh;
+ min-height: 50vh;
  padding: 10rem 9% 2rem;
+
 }
 .home{
     display: flex;
@@ -68,8 +69,6 @@ section{
 .home-intro h1{
     font-size: 5.2rem;
     font-weight: 700;
- 
-
 }
 .home-intro h3{
     font-size: 3.2rem;
@@ -83,7 +82,7 @@ section{
     font-size: 1.8rem;
 }
 .home-image img{
-    width: 30vw;
+    width: 20vw;
     /* animation: floatImage 4s ease-in-out infinite; */
     animation: floatImage 4s ease-in-out infinite;
 border-radius: 50%;
@@ -119,14 +118,14 @@ border: .2rem solid var(--main-color);
     text-decoration: none;
 }
 .journey{
-    padding: 0;
+   
 }
+
 .journey h2{
     font-size: 4rem;
    
     margin-bottom: 2rem;
 }
-
 
 .journey-box h3{
     font-size: 3.5rem;   
@@ -237,15 +236,17 @@ border: .2rem solid var(--main-color);
     border-radius: 1.4rem;
     opacity: 0.7;
 }
+
+   
 .project-items h4 a{
     font-size: 1.7rem;
      text-decoration: none;
-   color: var(--text-color);
+   color: var(--main-color);
    
 }
 .project-items a:hover{
     transition: 0.5s ease-in;
-    color: var(--main-color);
+    color: var(--text-color);
   
 }
 .project-items p{
@@ -298,11 +299,11 @@ border: .2rem solid var(--main-color);
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 9%;
+    padding: 1.4rem 6%;
     background: var(--scnd-color);
 }
 .footer-text{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 .footer-icon-top{
     display: inline-flex;
@@ -320,3 +321,329 @@ border: .2rem solid var(--main-color);
     font-size: 2.4rem;
     color: var(--scnd-color);
 }
+
+/* Media-query */
+
+@media(max-width:600px){
+    .navbar{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70%;
+        left: 0;
+     
+       background-color: var(--scnd-color);
+      
+       transition: 0.3s ease;
+    }
+    .navbar a{
+        padding: 0.1rem 0;
+    }
+    .intro-me{
+        margin-top: 4.3rem;
+    }
+    #menu-icon{
+        display: block;
+        font-size: 2rem;
+    }
+   
+     .active{
+        display: flex;
+     }
+     .hide{
+        display: none;
+        font-size: 2rem;
+     }
+   
+    .home{
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-intro h3{
+        font-size: 2rem;
+    }
+    .home-intro h1{
+        font-size: 3.5rem;
+    }
+    .home-image img{
+     width: 50vw;
+      max-width: 100%;
+    }
+    .journey h2{
+        font-size: 2.1rem;
+        text-align: center;
+   
+    }
+    .journey-box h3{
+        font-size: 2.5rem;
+        
+    }
+    .projects h2{
+        font-size: 0.5rem;
+        text-align: center;
+    }
+    .project-container{
+        flex-direction: column;
+    
+    }
+    .project-items img{
+        max-height: 100%;
+        margin-bottom: 2rem;
+    }
+    .project-items h4, .project-items p{
+        display: none;
+    }
+    .input-form input, .input-form textarea{
+        width: 100%;
+    }
+    .footer-text{
+        font-size: 1.5rem;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .skills h2{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .skill-items img{
+       width: 100%;
+       max-height: 10rem;
+    }
+     .skill-layers h3{
+   font-size: 1.7rem; /* Smaller font size */
+    }
+    .skill-layers p{
+        font-size: 1rem;
+      
+        font-weight: normal;
+    }
+
+}
+@media(max-width:900px){
+   
+    .home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      
+      
+    }
+    .home-intro h1 {
+        font-size: 3.5rem;  /* Reduce the heading size */
+    }
+
+    .home-intro h3 {
+        font-size: 2.5rem;  /* Reduce subtitle size */
+    }
+
+    .home-intro p {
+        font-size: 1.6rem;  /* Adjust the paragraph font size */
+    }
+    .home-image img {
+        width: 50vw;  
+        margin: 2rem;  
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        margin-left: 0.9rem;  
+    }
+
+    .journey h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .skills h2{
+        font-size: 2.3rem;
+        text-align: center;
+    }
+    
+    .skill-layers h3{
+        font-size: 2rem;
+    }
+    .skill-layers p{
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+
+    .skill-items img{
+        max-height: 15rem;
+        max-width: 100%;
+    }
+    .project-container{
+        flex-direction: column;
+
+    }
+  .project-items h4, .project-items p{
+        display: none;
+    }
+    .project-items img{
+        max-height: 80%;
+        margin-bottom: 3rem;  
+    }
+    .projects h2{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    .footer{
+        flex-direction: column;
+    }
+
+   
+    .journey-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    /* For journey box images */
+    .journey-box img {
+        height: auto;        
+       max-width: 30rem;    
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+    .journey-box h3 {
+        font-size: 1.8rem;
+    }
+
+    .journey-box p {
+        font-size: 1rem;
+       
+    }
+    
+}
+@media(max-width:1025px){
+    .home-image img{
+      max-width: 100%;
+        width: 55vw;
+        
+    }
+    .home-image img{
+        animation: none;
+    }
+    .home-image h3{
+        font-size: 1rem;
+        font-weight: 100;
+    
+    }
+    .home-intro h1{
+        font-size: 3rem;
+    }
+    .journey h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .journey-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .journey-box h3{
+        font-size: 2rem;
+    }
+    .journey-box p{
+        font-size: 1.3rem;
+    }
+    .projects h2{
+        font-size: 3rem;
+    }
+    .project-container{
+        flex-direction: column;
+    }
+    .project-items img{
+   max-height: 80%;
+}
+}
+@media(min-width:1025px){
+    .projects h2{
+    /* font-size: 4rem; */
+    /* margin-bottom: 3rem; */
+}
+.project-container{
+    display: flex;
+    justify-content: space-between;
+  gap: 2rem;
+   
+    
+}
+.project-items img{
+    max-height: 40rem;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 1.4rem;
+    opacity: 0.7;
+}
+.project-items h4 a{
+    font-size: 1.5rem;
+     text-decoration: none;
+   color: var(--text-color);
+   
+}
+.project-items a:hover{
+    transition: 0.5s ease-in;
+    color: var(--main-color);
+  
+}
+.project-items p{
+    font-size: 1rem;
+
+}
+
+.journey-box h3{
+    font-size: 3rem;   
+}
+.journey-box p{
+    font-size: 1.2rem;
+    padding: 1rem 0;
+   
+}
+
+.journey-box {
+    background-color: var(--scnd-color);
+    border-radius: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+  border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.journey-box img {
+    width: 8rem; /* You can adjust the size of images as needed */
+}
+.journey-box {
+    height: 100%; 
+    min-height: 10rem; 
+}
+.journey-box:hover{
+     border: var(--main-color);
+    transform: scale(1.02);
+}
+}
+@media(max-width:400px){
+    .journey h2{
+        font-size: 0.5rem;
+        text-align: center;
+    }
+    .projects h2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .contact h2{
+        font-size: 1rem;
+        margin: 0;
+    }
+}
+
+
+
+
+
